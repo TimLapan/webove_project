@@ -1,39 +1,79 @@
-body {
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #343a40;
+    color: #333;
 }
 
-header {
-    margin-bottom: 20px;
-}
-
-.timeline {
+/* Фон и наложение */
+.intro {
+    background-image: url('https://example.com/your-background-image.jpg'); /* Фоновое изображение */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.timeline-item {
-    display: grid;
-    place-items: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный слой */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.timeline-item:hover {
-    transform: scale(1.05);
+/* Стили для наклоненных изображений в левом углу */
+.side-images {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.timeline-item h2 {
-    font-size: 1.5em;
+.side-images img {
+    width: 150px;
+    height: auto;
+    transform: rotate(-10deg);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Плавный переход для эффекта */
+}
+
+.side-images img:hover {
+    transform: rotate(0deg) scale(1.1); /* Увеличение на 10% при наведении */
+}
+/* Центрированный контент */
+.center-content {
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.center-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
-.timeline-item p {
-    font-size: 1em;
-    text-align: center;
+.center-content .subheading {
+    font-size: 1.2em;
+    margin-top: 10px;
 }
