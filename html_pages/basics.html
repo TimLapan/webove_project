@@ -6,7 +6,7 @@
     <title>Основы нейросетей</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/basics_styles.css">
-    <link rel="icon" sizes="200x200" href="../images_and_icons/favicon.png" type="image/x-icon">
+    <link rel="icon" sizes="200x200" href="../images_and_icons/timas_materials/favicon.png" type="image/x-icon">
 </head>
 <body>
     <!-- Навигационное меню -->
@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Главная</a>
             <!-- Кнопка-бургер -->
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Навигационное меню -->
@@ -24,7 +24,7 @@
                         <a class="nav-link" href="basics.html">Основы нейросетей</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="history.html">history</a>
+                        <a class="nav-link" href="history.html">Пайтон и его Основы</a>
                     </li>
                 </ul>
             </div>
@@ -36,16 +36,17 @@
         <h1 class="mb-4" id="main_header">Основы нейросетей</h1>
         <hr>
         <!-- Описание нейросетей -->
-        <section>
-            <h2>Что такое нейросети?</h2>
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Что такое нейросети?</h2>
             <p>Нейронные сети (или искусственные нейронные сети, АНС) — это алгоритмы машинного обучения, вдохновленные биологическими нейронами и мозговыми процессами. Они состоят из множества взаимосвязанных узлов, называемых "нейронами", организованных в слои. Каждый нейрон получает входные данные, применяет к ним веса и активационные функции, и передает результат на следующий слой. Нейросети способны учиться на данных и улучшать свои предсказания, что делает их мощным инструментом для решения сложных задач:</p>
             <ul>
                 <li><strong>Распознавание изображений:</strong> классификация объектов, обнаружение лиц, медицинская диагностика по изображениям.</li>
                 <li><strong>Анализ текста:</strong> обработка естественного языка, машинный перевод, анализ тональности.</li>
                 <li><strong>Прогнозирование временных рядов:</strong> финансовые прогнозы, прогнозирование погоды, анализ продаж.</li>
             </ul>
+            <br>
             <hr>
-            <h3>Как работают нейронные сети?</h3>
+            <h3 class="text-center mb-4">Как работают нейронные сети?</h3>
             <p>Нейронная сеть состоит из нескольких типов слоев:</p>
             <ul>
                 <li><strong>Входной слой:</strong> получает данные, поступающие в сеть (например, пиксели изображения или текстовые данные).</li>
@@ -62,12 +63,13 @@
             <p>Этот цикл повторяется множество раз, пока сеть не достигнет желаемой точности.</p>
         </section>
         <hr>
+        
         <!-- Таблица с направлениями нейронных сетей -->
         <section>
-            <h2>Основные направления и компоненты нейронных сетей</h2>
+            <h2 class="text-center mb-4 text-light">Основные направления и компоненты нейронных сетей</h2>
             <div class="table-responsive">
-                <table class="table table-striped table-bordered">
-                    <thead class="table-dark">
+                <table class="table table-striped table-bordered table-dark">
+                    <thead>
                         <tr>
                             <th scope="col">Компонент/Направление</th>
                             <th scope="col">Описание</th>
@@ -106,6 +108,7 @@
                 </table>
             </div>
         </section>
+        <hr>
 
         <!-- Библиотеки Python -->
         <section class="container my-5">
@@ -147,51 +150,45 @@
             </ul>
             <p class="text-center">Выбор библиотеки зависит от конкретной задачи, требований к производительности и личных предпочтений разработчика.</p>
         </section>
+        <hr>
 
         <!-- TensorFlow 2 -->
         <section class="container my-5">
             <h2 class="text-center mb-4">Краткое руководство по TensorFlow 2 для начинающих</h2>
+            <img src="../images_and_icons/timas_materials/tensorflow.jpg" class="img-fluid" alt="TensorFlow">
+            <br>
             <p>
                 Это краткое введение использует Keras для:
-
-                Загрузите готовый набор данных.
-                Создайте модель машинного обучения нейронной сети, которая классифицирует изображения.
-                Обучите эту нейронную сеть.
-                Оцените точность модели.
+                <ol>
+                    <li><strong>Загрузите готовый набор данных.</strong></li>
+                    <li><strong>Создайте модель машинного обучения нейронной сети, которая классифицирует изображения.</strong></li>
+                    <li><strong>Обучите эту нейронную сеть.</strong></li>
+                    <li><strong>Загрузите готовый набор данных.</strong></li>
+                    <li><strong>Оцените точность модели.</strong></li>
+                </ol>
                 Keras — это API высокого уровня платформы TensorFlow. Он предоставляет доступный и высокопроизводительный интерфейс для решения задач машинного обучения (ML) с упором на современное глубокое обучение. Keras охватывает каждый этап рабочего процесса машинного обучения: от обработки данных до настройки гиперпараметров и развертывания. Он был разработан с упором на возможность быстрого экспериментирования.</p>
         
-            <ul class="list-unstyled">
-                <li class="mb-4">
-                    <strong>Запуск в Google Colab:</strong>
-                    Это краткое введение использует Keras для:
-                    <ul>
-                        <li>Загрузки готового набора данных.</li>
-                        <li>Создания модели нейронной сети для классификации изображений.</li>
-                        <li>Обучения и оценки модели.</li>
-                    </ul>
-                    Запустите блокнот в Google Colab, подключитесь к среде Python и выполните все ячейки, выбрав «Среда выполнения» > «Выполнить все».
-                </li>
-        
-                <li class="mb-4">
+                <div class="feature-block mb-4">
                     <strong>Настройка TensorFlow:</strong>
-                    Импортируйте TensorFlow и проверьте его версию:
+                    <p>Импортируйте TensorFlow и проверьте его версию, чтобы убедиться, что установленная версия актуальна:</p>
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>import tensorflow as tf<br>print("TensorFlow version:", tf.__version__)</code>
                         <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
                     </div>
-                </li>
-        
-                <li class="mb-4">
+                </div>
+            
+                <div class="feature-block mb-4">
                     <strong>Загрузка набора данных MNIST:</strong>
+                    <p>Загрузите стандартный набор данных MNIST и нормализуйте значения пикселей, разделив их на 255:</p>
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>mnist = tf.keras.datasets.mnist<br>(x_train, y_train), (x_test, y_test) = mnist.load_data()<br>x_train, x_test = x_train / 255.0, x_test / 255.0</code>
                         <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
                     </div>
-                </li>
-        
-                <li class="mb-4">
+                </div>
+            
+                <div class="feature-block mb-4">
                     <strong>Создание модели:</strong>
-                    Создайте модель с использованием слоев Keras.
+                    <p>Создайте нейронную сеть, используя Keras. Эта модель включает слои `Flatten`, `Dense` и `Dropout` для классификации изображений:</p>
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>model = tf.keras.models.Sequential([<br>
                         &nbsp;&nbsp;tf.keras.layers.Flatten(input_shape=(28, 28)),<br>
@@ -200,11 +197,11 @@
                         &nbsp;&nbsp;tf.keras.layers.Dense(10)<br>])</code>
                         <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
                     </div>
-                </li>
-        
-                <li class="mb-4">
+                </div>
+            
+                <div class="feature-block mb-4">
                     <strong>Компиляция и обучение модели:</strong>
-                    Настройте оптимизатор и функцию потерь для обучения модели.
+                    <p>Настройте оптимизатор и функцию потерь, затем обучите модель на тренировочных данных в течение нескольких эпох:</p>
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>model.compile(optimizer='adam',<br>
                         &nbsp;&nbsp;loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),<br>
@@ -212,20 +209,20 @@
                         model.fit(x_train, y_train, epochs=5)</code>
                         <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
                     </div>
-                </li>
-        
-                <li class="mb-4">
+                </div>
+            
+                <div class="feature-block mb-4">
                     <strong>Оценка модели:</strong>
-                    Используйте метод `Model.evaluate` для проверки производительности модели на тестовом наборе данных.
+                    <p>Используйте метод `Model.evaluate` для проверки точности модели на тестовых данных:</p>
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>model.evaluate(x_test, y_test, verbose=2)</code>
                         <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
                     </div>
-                </li>
-        
-                <li class="mb-4">
+                </div>
+            
+                <div class="feature-block mb-4">
                     <strong>Возвращение вероятностей:</strong>
-                    Чтобы получить вероятность для каждого класса, добавьте слой `Softmax` к модели.
+                    <p>Добавьте слой `Softmax` к модели, чтобы получить вероятность для каждого класса:</p>
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>probability_model = tf.keras.Sequential([<br>
                         &nbsp;&nbsp;model,<br>
@@ -233,9 +230,9 @@
                         probability_model(x_test[:5])</code>
                         <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
                     </div>
-                </li>
-            </ul>
+                </div>
         </section>
+        <hr>
 
         <!-- Мини-тест -->
         <section class="my-5">
@@ -292,9 +289,24 @@
                     </div>
                 </div>
 
+                <!-- Вопрос 4 -->
+                <div class="mb-3">
+                    <label class="form-label">4. Какой метод используется для оценки точности модели на тестовых данных?</label>
+                    <input type="text" class="form-control" name="question4" placeholder="Введите ваш ответ">
+                </div>
+                <!-- Вопрос 5 -->
+                <div class="mb-3">
+                    <label class="form-label">5. Какой слой добавляется для получения вероятностей классов?</label>
+                    <input type="text" class="form-control" name="question5" placeholder="Введите ваш ответ">
+                </div>
+                <!-- Вопрос 6 -->
+                <div class="mb-3">
+                    <label class="form-label">6. Какой оптимизатор используется в примере для компиляции модели?</label>
+                    <input type="text" class="form-control" name="question6" placeholder="Введите ваш ответ">
+                </div>
                 <button type="button" class="btn btn-primary" onclick="checkQuiz()">Проверить ответы</button>
                 <p id="result" class="mt-3"></p>
-            </form>
+                </form>
         </section>
     </main>
 

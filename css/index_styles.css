@@ -2,104 +2,90 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f8f9fa; /* Светлый фон */
+    background-color: #1e1e2f; /* Темный фон */
     padding-bottom: 50px; /* Отступ для фиксации футера */
 }
-
 #index_white {
-    color: #fff;
+    color: #fff; /* Белый текст для элемента с id "index_white" */
 }
-
 h1, h2, h3 {
     color: #007bff; /* Цвет заголовков */
 }
-
 p {
     font-size: 18px;
-    color: #333; /* Более темный цвет текста */
+    color: #f4f4f9; /* Светлый цвет текста */
 }
-
 ul {
     margin-top: 15px;
     padding-left: 20px;
 }
-
 ul li {
     margin-bottom: 10px;
+    color: #f4f4f9; /* Светлый цвет для элементов списка */
 }
-
 ol {
     margin-top: 15px;
     padding-left: 20px;
 }
-
 ol li {
     margin-bottom: 10px;
+    color: #f4f4f9; /* Светлый цвет для элементов списка */
 }
 
-/* Навигационное меню */
+/* Стили для навигационного меню */
 .navbar {
     background-color: #343a40; /* Темный фон для меню */
 }
-
 .navbar-brand, .navbar-nav .nav-link {
-    color: #fff !important; /* Цвет ссылок в меню */
+    color: #f4f4f9 !important; /* Светлый цвет ссылок в меню */
 }
-
-.navbar-nav .nav-link:hover {
-    color: #f8f9fa !important; /* Цвет при наведении */
-}
-
 .navbar-toggler {
     border: none; /* Убираем рамку кнопки бургера */
 }
-
 .navbar-toggler-icon {
-    background-color: #fff; /* Белая иконка кнопки-бургера */
+    background-color: #f4f4f9; /* Светлая иконка кнопки-бургера */
+}
+.navbar .nav-link:hover {
+    color: #6250a7 !important; /* Цвет при наведении */
 }
 
 /* Основное содержание */
 .container {
-    background-color: #fff; /* Белый фон для содержания */
+    background-color: #2a2a3c; /* Темный фон для содержания */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Более темная тень */
     border-radius: 8px; /* Закругленные углы */
 }
-
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
-
 h2 {
     font-size: 28px;
     margin-top: 20px;
     margin-bottom: 15px;
 }
-
 h3 {
     font-size: 24px;
     margin-top: 15px;
     margin-bottom: 10px;
 }
-
 p {
     font-size: 18px;
-    color: #555;
+    color: #f4f4f9; /* Светлый цвет текста */
 }
 
 /* Стили для теста */
 form label {
     font-weight: bold;
+    color: #f4f4f9; /* Светлый цвет для меток формы */
 }
-
 input[type="radio"] {
     margin-right: 10px;
 }
-
 button {
     margin-top: 15px;
-    background-color: #007bff;
+    background-color: #007bff; /* Цвет кнопки */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -107,9 +93,8 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
-
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Цвет кнопки при наведении */
 }
 
 /* Стили для футера */
@@ -117,23 +102,21 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #343a40;
+    background-color: #343a40; /* Темный фон для футера */
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Более темная тень */
 }
 
 /* Стили для ссылок */
 a {
     text-decoration: none;
-    color: #007bff;
+    color: #007bff; /* Цвет ссылок */
 }
-
 a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+    color: #0056b3; /* Цвет ссылок при наведении */
 }
 
 /* Мобильная адаптация */
@@ -141,24 +124,19 @@ a:hover {
     .container {
         padding: 15px;
     }
-
     h1 {
         font-size: 28px;
     }
-
     h2 {
         font-size: 22px;
     }
-
     h3 {
         font-size: 20px;
     }
-    
     button {
         width: 100%; /* Кнопки занимают всю ширину на мобильных устройствах */
     }
 }
-
 #footer_text {
-    color: #fff;
+    color: #f4f4f9; /* Светлый цвет для текста в футере */
 }

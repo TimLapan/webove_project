@@ -2,33 +2,25 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #1e1e2f; /* Темный фон для страницы */
+    color: #f4f4f9; /* Светлый цвет текста */
 }
 
 /* Стили для навигационного меню */
 .navbar {
     background-color: #343a40; /* Темный фон для меню */
 }
-
 .navbar-brand, .navbar-nav .nav-link {
-    color: #fff !important; /* Цвет ссылок в меню */
+    color: #f4f4f9 !important; /* Светлый цвет ссылок в меню */
 }
-
-.navbar-nav .nav-link:hover {
-    color: #f8f9fa !important; /* Цвет при наведении */
-}
-
 .navbar-toggler {
     border: none; /* Убираем рамку кнопки бургера */
 }
-
 .navbar-toggler-icon {
-    background-color: #fff; /* Белая иконка кнопки-бургера */
+    background-color: #f4f4f9; /* Светлая иконка кнопки-бургера */
 }
-
 .navbar .nav-link:hover {
-    color: #6250a7 !important;
+    color: #6250a7 !important; /* Цвет при наведении */
 }
 
 .container {
@@ -38,62 +30,58 @@ body {
 
 /* Заголовки */
 h1, h2, h3 {
-    color: #343a40;
+    color: #f4f4f9; /* Светлый цвет заголовков */
 }
-
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
 }
-
 h2 {
     font-size: 1.8em;
     margin-top: 30px;
     margin-bottom: 15px;
 }
-
 #main_header {
     text-align: center;
 }
+
 /* Стили для разделов */
 section {
     margin-bottom: 40px;
     padding: 20px;
-    background: #ffffff;
+    background: #2a2a3c; /* Темный фон для секций */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Более темная тень */
 }
 
 /* Стили списка */
 ul, ol {
     margin-left: 20px;
+    color: #f4f4f9; /* Светлый цвет для списков */
 }
 
 /* Стили для теста */
 form#quiz-form {
-    background-color: #e9ecef;
+    background-color: #2a2a3c; /* Темный фон для формы */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 form#quiz-form .form-label {
     font-weight: bold;
-    color: #333;
+    color: #f4f4f9; /* Светлый цвет для меток формы */
 }
-
 form#quiz-form input[type="radio"], form#quiz-form input[type="checkbox"] {
     margin-right: 8px;
+    accent-color: #007bff; /* Цвет для радио и чекбоксов */
 }
-
 button.btn-primary {
-    background-color: #007bff;
+    background-color: #007bff; /* Цвет кнопки */
     border-color: #007bff;
     transition: background-color 0.3s ease;
 }
-
 button.btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Цвет кнопки при наведении */
     border-color: #0056b3;
 }
 
@@ -101,48 +89,51 @@ button.btn-primary:hover {
 #result {
     font-size: 1.2em;
     font-weight: bold;
+    color: #f4f4f9; /* Светлый цвет для результатов */
 }
 
 /* Стили контейнера кода */
 .code-container {
-    background-color: #f8f9fa;
+    background-color: #2a2a3c; /* Темный фон для контейнера кода */
+    border: 1px solid #444; /* Темная граница */
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #e1e1e1;
     width: 100%;
+    position: relative; /* Позволяет использовать абсолютное позиционирование для дочерних элементов */
 }
 
-.code-container code {
+code {
     font-family: monospace;
     font-size: 1rem;
-    color: #333;
-    background: #f1f1f1;
-    padding: 2px 5px;
-    border-radius: 3px;
-    user-select: all;
-    width: 100%; /* занимает всю ширину на мобильных устройствах */
-    white-space: nowrap;
+    color: #f4f4f9; /* Светлый цвет для текста кода */
+    background-color: transparent; /* Прозрачный фон внутри кода */
+    padding: 0;
+    display: block;
     overflow: auto;
 }
 
-.code-description {
-    font-size: 0.9rem;
-    color: #555;
-}
-
 .copy-button {
-    background-color: #007bff;
+    background-color: #007bff; /* Цвет кнопки */
     color: #fff;
     border: none;
-    padding: 3px 8px;
+    padding: 2px 8px;
     font-size: 0.8rem;
-    border-radius: 4px;
+    border-radius: 65px;
     cursor: pointer;
-    max-width: 120px;
+    position: absolute; /* Позиционирование кнопки относительно родительского контейнера */
+    top: 10px; /* Отступ от верхнего края контейнера */
+    right: 10px; /* Отступ от правого края контейнера */
 }
 
 .copy-button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+.img-fluid {
+    display: block; /* Делает изображение блочным элементом */
+    margin: 0 auto; /* Центрирует изображение */
+    max-width: 90%; /* Ограничивает максимальную ширину */
+    height: auto; /* Сохраняет пропорции изображения */
 }
 
 /* Медиа-запрос для мобильных устройств */
@@ -150,24 +141,25 @@ button.btn-primary:hover {
     .container {
         padding: 15px;
     }
-
     h1 {
         font-size: 1.6em;
     }
-
     h2 {
         font-size: 1.4em;
     }
-
     .code-container {
         text-align: left;
     }
-
-    .code-description,
+    .code-description {
+        position: static; /* Убираем абсолютное позиционирование */
+        width: 100%; /* Кнопка занимает всю ширину контейнера */
+        margin-top: 10px; /* Отступ сверху для отделения от кода */
+    }
     .copy-button {
-        text-align: left;
-        margin-top: 10px;
-        width: 100%; /* Расширяет описание и кнопку на мобильных */
+        position: static; /* Убираем абсолютное позиционирование */
+        display: block; 
+        margin: 0 auto;
+        width: 50%; /* Кнопка занимает всю ширину контейнера */
+        margin-top: 10px; /* Отступ сверху для отделения от кода */
     }
 }
-
