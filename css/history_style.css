@@ -1,4 +1,4 @@
-/* Общие стили */
+/* Основные стили */
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +11,36 @@ body, html {
     color: #333;
 }
 
-/* Фон и наложение */
+.center-content {
+    color: #ffffff; /* Основной цвет текста */
+    text-align: center;
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.center-content h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    color: rgb(67, 140, 201);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Тень для глубины */
+}
+
+.center-content .subheading {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: rgb(255, 214, 71); /* Светло-серый оттенок для подзаголовка */
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+
 .intro {
-    background-image: url('https://example.com/your-background-image.jpg'); /* Фоновое изображение */
+    background-image: url('../images_and_icons/history_photo/fon.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -24,7 +51,7 @@ body, html {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный слой */
+    background-color: rgba(0, 0, 0, 0.4 );
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +62,7 @@ body, html {
     justify-content: center;
 }
 
-/* Стили для наклоненных изображений в левом углу */
+/* Стили для боковых изображений */
 .side-images {
     position: absolute;
     top: 50%;
@@ -46,34 +73,34 @@ body, html {
     gap: 15px;
 }
 
-.side-images img {
+.image-container {
+    position: relative;
     width: 150px;
     height: auto;
-    transform: rotate(-10deg);
+    transition: transform 0.3s ease; /* Плавный переход */
+
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Плавный переход для эффекта */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: rotate(-25deg); /* Начальный наклон */
 }
 
-.side-images img:hover {
-    transform: rotate(0deg) scale(1.1); /* Увеличение на 10% при наведении */
-}
-/* Центрированный контент */
-.center-content {
-    color: #fff;
-    text-align: center;
-    z-index: 2;
-    max-width: 600px;
+/* При наведении: изображение выравнивается и увеличивается */
+.image-container.hover img {
+    transform: rotate(0deg) scale(2); /* Выравнивание и увеличение */
+
 }
 
-.center-content h1 {
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+/* Смещение других изображений */
+.image-container.move-down {
+    transform: translateY(60px); /* Смещение вниз */
 }
 
-.center-content .subheading {
-    font-size: 1.2em;
-    margin-top: 10px;
+.image-container.move-up {
+    transform: translateY(-60px); /* Смещение вверх */
 }
