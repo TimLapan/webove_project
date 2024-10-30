@@ -38,7 +38,6 @@ body, html {
     margin-top: 10px;
 }
 
-
 .intro {
     background-image: url('../images_and_icons/history_photo/fon.png');
     background-size: cover;
@@ -51,7 +50,7 @@ body, html {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.4 );
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
     left: 0;
@@ -62,7 +61,6 @@ body, html {
     justify-content: center;
 }
 
-/* Стили для боковых изображений */
 .side-images {
     position: absolute;
     top: 50%;
@@ -78,7 +76,6 @@ body, html {
     width: 150px;
     height: auto;
     transition: transform 0.3s ease; /* Плавный переход */
-
 }
 
 .image-container img {
@@ -90,13 +87,10 @@ body, html {
     transform: rotate(-25deg); /* Начальный наклон */
 }
 
-/* При наведении: изображение выравнивается и увеличивается */
 .image-container.hover img {
     transform: rotate(0deg) scale(2); /* Выравнивание и увеличение */
-
 }
 
-/* Смещение других изображений */
 .image-container.move-down {
     transform: translateY(60px); /* Смещение вниз */
 }
