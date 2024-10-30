@@ -23,3 +23,19 @@ function checkQuiz() {
         resultElement.style.color = "red";  // Красный цвет для неполного результата
     }
 }
+function copyCode(button) {
+    // Находим родительский элемент и код для копирования
+    const codeContainer = button.previousElementSibling.previousElementSibling;
+    const codeText = codeContainer.textContent;
+
+    // Копируем текст в буфер обмена
+    navigator.clipboard.writeText(codeText).then(() => {
+        // Изменяем текст кнопки на "Скопировано!" и возвращаем через 2 секунды
+        button.textContent = "Скопировано!";
+        setTimeout(() => {
+            button.textContent = "Копировать";
+        }, 2000);
+    }).catch(err => {
+        console.error("Ошибка копирования:", err);
+    });
+}
