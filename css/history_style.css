@@ -5,14 +5,16 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: Arial, sans-serif;
     color: #333;
 }
 
 .center-content {
-    color: #ffffff; /* Основной цвет текста */
+    color: #ffffff;
+    /* Основной цвет текста */
     text-align: center;
     z-index: 2;
     max-width: 600px;
@@ -23,17 +25,19 @@ body, html {
 .center-content h1 {
     font-size: 4.5em;
     font-weight: 700;
-    color: rgb(67, 140, 201);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Тень для глубины */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    /* Тень для глубины */
 }
 
 .center-content .subheading {
     font-size: 1.2em;
     font-weight: 300;
-    color: rgb(255, 214, 71); /* Светло-серый оттенок для подзаголовка */
+    color: rgb(255, 214, 71);
+    /* Светло-серый оттенок для подзаголовка */
     letter-spacing: 2px;
     margin-top: 10px;
 }
@@ -75,7 +79,8 @@ body, html {
     position: relative;
     width: 150px;
     height: auto;
-    transition: transform 0.3s ease; /* Плавный переход */
+    transition: transform 0.3s ease;
+    /* Плавный переход */
 }
 
 .image-container img {
@@ -84,17 +89,21 @@ body, html {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    transform: rotate(-25deg); /* Начальный наклон */
+    transform: rotate(-25deg);
+    /* Начальный наклон */
 }
 
 .image-container.hover img {
-    transform: rotate(0deg) scale(2); /* Выравнивание и увеличение */
+    transform: rotate(0deg) scale(2);
+    /* Выравнивание и увеличение */
 }
 
 .image-container.move-down {
-    transform: translateY(60px); /* Смещение вниз */
+    transform: translateY(60px);
+    /* Смещение вниз */
 }
 
 .image-container.move-up {
-    transform: translateY(-60px); /* Смещение вверх */
+    transform: translateY(-60px);
+    /* Смещение вверх */
 }
