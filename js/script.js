@@ -45,8 +45,7 @@ function copyCode(button) {
     // Находим родительский элемент .code-container
     const codeContainer = button.closest('.code-container');
     // Находим элемент <code> внутри контейнера
-    const codeText = codeContainer.querySelector('code').textContent;
-
+    const codeText = codeContainer.querySelector('code').textContent; // Используем textContent для сохранения форматирования
     // Копируем текст в буфер обмена
     navigator.clipboard.writeText(codeText).then(() => {
         // Изменяем текст кнопки на "Скопировано!" и возвращаем через 2 секунды

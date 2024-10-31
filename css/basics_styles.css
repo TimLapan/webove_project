@@ -13,6 +13,24 @@ body {
 .navbar-brand, .navbar-nav .nav-link {
     color: #f4f4f9 !important; /* Светлый цвет ссылок в меню */
 }
+
+.navbar-brand {
+    padding-top: 0.5rem; /* Устанавливает верхний внутренний отступ */
+    padding-bottom: 0.5rem; /* Устанавливает нижний внутренний отступ */
+    font-size: 1.2rem; /* Уменьшает размер шрифта для выравнивания */
+    line-height: 1.5; /* Устанавливает высоту строки */
+}
+
+.navbar-brand:hover {
+    color: #6250a7 !important; /* Цвет при наведении */
+}
+
+.nav-item {
+    padding-top: 0.2rem; /* Устанавливает верхний внутренний отступ */
+    padding-bottom: 0.5rem; /* Устанавливает нижний внутренний отступ */
+    font-size: 1.2rem; /* Уменьшает размер шрифта для выравнивания */
+    line-height: 1.5; /* Устанавливает высоту строки */
+}
 .navbar-toggler {
     border: none; /* Убираем рамку кнопки бургера */
 }
@@ -102,10 +120,17 @@ button.btn-primary:hover {
     position: relative; /* Позволяет использовать абсолютное позиционирование для дочерних элементов */
 }
 
-code {
-    font-family: monospace;
-    font-size: 1rem;
-    color: #f4f4f9; /* Светлый цвет для текста кода */
+.code-block {
+    border-radius: 4px; /* Закругленные углы */
+    padding: 15px; /* Внутренний отступ */
+    font-size: 1rem; /* Размер шрифта */
+    font-family: Courier, monospace; /* Моноширинный шрифт */
+    overflow-x: auto; /* Прокрутка по горизонтали, если код слишком длинный */
+    color: #f4f4f9; /* Светлый цвет текста */
+}
+
+.code-block code {
+    color: inherit; /* Наследует цвет от .code-block */
     background-color: transparent; /* Прозрачный фон внутри кода */
     padding: 0;
     display: block;
@@ -116,7 +141,7 @@ code {
     background-color: #007bff; /* Цвет кнопки */
     color: #fff;
     border: none;
-    padding: 2px 8px;
+    padding: 2px 7px;
     font-size: 0.8rem;
     border-radius: 65px;
     cursor: pointer;
@@ -139,7 +164,7 @@ code {
 /* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
     .container {
-        padding: 15px;
+        padding: 13px;
     }
     h1 {
         font-size: 1.6em;
@@ -159,7 +184,7 @@ code {
         position: static; /* Убираем абсолютное позиционирование */
         display: block; 
         margin: 0 auto;
-        width: 50%; /* Кнопка занимает всю ширину контейнера */
-        margin-top: 10px; /* Отступ сверху для отделения от кода */
+        width: 35%; /* Кнопка занимает всю ширину контейнера */
+        margin-top: 15px; /* Отступ сверху для отделения от кода */
     }
 }

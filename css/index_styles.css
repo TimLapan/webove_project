@@ -33,8 +33,26 @@ ol li {
 }
 
 /* Стили для навигационного меню */
+
+.navbar-brand {
+    padding-top: 0.5rem; /* Устанавливает верхний внутренний отступ */
+    padding-bottom: 0.5rem; /* Устанавливает нижний внутренний отступ */
+    font-size: 1.2rem; /* Уменьшает размер шрифта для выравнивания */
+    line-height: 1.5; /* Устанавливает высоту строки */
+}
+
+.navbar-brand:hover {
+    color: #6250a7 !important; /* Цвет при наведении */
+}
+
 .navbar {
     background-color: #343a40; /* Темный фон для меню */
+}
+.nav-item {
+    padding-top: 0.2rem; /* Устанавливает верхний внутренний отступ */
+    padding-bottom: 0.5rem; /* Устанавливает нижний внутренний отступ */
+    font-size: 1.2rem; /* Уменьшает размер шрифта для выравнивания */
+    line-height: 1.5; /* Устанавливает высоту строки */
 }
 .navbar-brand, .navbar-nav .nav-link {
     color: #f4f4f9 !important; /* Светлый цвет ссылок в меню */
@@ -118,7 +136,6 @@ a {
 a:hover {
     color: #0056b3; /* Цвет ссылок при наведении */
 }
-
 /* Мобильная адаптация */
 @media (max-width: 768px) {
     .container {
@@ -139,4 +156,25 @@ a:hover {
 }
 #footer_text {
     color: #f4f4f9; /* Светлый цвет для текста в футере */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer_text {
+    font-size: 15px;
+}
+.github-link {
+    color: #ffffff; /* Белый цвет ссылки */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #007bff; /* Изменение цвета при наведении */
 }
