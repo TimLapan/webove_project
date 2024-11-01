@@ -6,6 +6,44 @@ body {
     color: #f4f4f9; /* Светлый цвет текста */
 }
 
+/* Стили для боковой панели */
+#left_navigation_menu {
+    background-color: #1e1e2f;
+    padding: 20px;
+    height: calc(100vh - 60px);
+    position: sticky;
+    top: 60px;
+    border-right: 1px solid #343a40;
+    border-radius: 8px; /* Добавили закругленные края */
+}
+
+#left_navigation_menu h5 {
+    color: #f4f4f9;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#left_navigation_menu .nav-link {
+    color: #007bff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#left_navigation_menu .nav-link:hover {
+    color: #00aaff;
+}
+
+#left_navigation_menu .nav-link.active {
+    font-weight: bold;
+    color: #00aaff;
+    background-color: #343a40;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+
 /* Стили для навигационного меню */
 .navbar {
     background-color: #343a40; /* Темный фон для меню */
@@ -105,6 +143,7 @@ button.btn-primary:hover {
 
 /* Стили для результатов теста */
 #result {
+    text-align: center;
     font-size: 1.2em;
     font-weight: bold;
     color: #f4f4f9; /* Светлый цвет для результатов */
@@ -163,6 +202,13 @@ button.btn-primary:hover {
 
 /* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
+    #left_navigation_menu {
+        position: relative;
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        border-right: none;
+    }
     .container {
         padding: 13px;
     }

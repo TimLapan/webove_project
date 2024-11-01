@@ -28,12 +28,12 @@ function checkQuiz() {
     }
 
     // Формируем сообщение в зависимости от результата
-    const resultText = `Вы ответили правильно на ${score} из 6 вопросов.`;
+    const resultText = `Odpovedali ste správne na ${score} z 6 otazok`;
     const resultElement = document.getElementById('result');
 
     // Изменяем цвет текста в зависимости от количества правильных ответов
     if (score === 6) {
-        resultElement.textContent = "Хорошая работа! " + resultText;
+        resultElement.textContent = "Goodjob " + resultText;
         resultElement.style.color = "green";  // Зеленый цвет для идеального результата
     } else {
         resultElement.textContent = resultText;
@@ -49,11 +49,31 @@ function copyCode(button) {
     // Копируем текст в буфер обмена
     navigator.clipboard.writeText(codeText).then(() => {
         // Изменяем текст кнопки на "Скопировано!" и возвращаем через 2 секунды
-        button.textContent = "Скопировано!";
+        button.textContent = "Copied!";
         setTimeout(() => {
-            button.textContent = "Копировать";
+            button.textContent = "Copy";
         }, 2000);
     }).catch(err => {
         console.error("Ошибка копирования:", err);
     });
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("#left_navigation_menu .nav-link");
+    const sections = document.querySelectorAll("section");
+
+    function setActiveLink() {
+        let index = sections.length;
+
+        // Определение активного раздела на основе прокрутки
+        while (--index && window.scrollY + 125 < sections[index].offsetTop) {}
+
+        // Удаление активного класса со всех ссылок и добавление только нужной
+        navLinks.forEach((link) => link.classList.remove("active"));
+        if (navLinks[index]) {
+            navLinks[index].classList.add("active");
+        }
+    }
+
+    // Вызов функции при прокрутке
+    window.addEventListener("scroll", setActiveLink);
+});

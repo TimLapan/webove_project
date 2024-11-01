@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/basics_styles.css">
     <link rel="icon" sizes="200x200" href="../images_and_icons/timas_materials/favicon.png" type="image/x-icon">
 </head>
-<body>
+<body data-spy="scroll" data-target="left_navigation_menu" data-offset="12">
     <!-- Navigačné menu -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
@@ -31,12 +31,36 @@
         </div>
     </nav>
 
+    <!-- Navigačné panel slava -->
+    <div class="container-fluid my-5">
+        <div class="row">
+            <nav id="left_navigation_menu" class="col-md-3 col-lg-2 p-3">
+                <h5 class="mb-3">Navigačné panel</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-neural-networks">O neurónových sieťach a ako oni fungujú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#neural-network-components">Komponenty neurónových sietí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#python-libraries">Knižnice Python pre neurónové siete</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tensorflow-guide">Príručka pre TensorFlow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mini-test">Mini-test</a>
+                    </li>
+                </ul>
+            </nav>
+
     <!-- Hlavný obsah -->
-    <main class="container my-5">
+    <main class="col-md-9 col-lg-10">
         <h1 class="mb-4" id="main_header">Základy neurónových sietí</h1>
         <hr>
         <!-- Popis neurónových sietí -->
-        <section class="container my-5">
+        <section id = "about-neural-networks" class="container my-5">
             <h2 class="text-center mb-4">Čo sú neurónové siete?</h2>
             <p>Neurónové siete (alebo umelé neurónové siete, UNS) sú algoritmy strojového učenia inšpirované biologickými neurónmi a procesmi v mozgu. Skladajú sa z mnohých vzájomne prepojených uzlov, nazývaných "neuróny", organizovaných do vrstiev. Každý neurón prijíma vstupné údaje, aplikuje na ne váhy a aktivačné funkcie a posiela výsledok do ďalšej vrstvy. Neurónové siete sa dokážu učiť z dát a zlepšovať svoje predpovede, čo ich robí silným nástrojom na riešenie zložitých úloh:</p>
             <ul>
@@ -44,9 +68,6 @@
                 <li><strong>Analýza textu:</strong> spracovanie prirodzeného jazyka, strojový preklad, analýza sentimentu.</li>
                 <li><strong>Predikcia časových radov:</strong> finančné predpovede, predikcia počasia, analýza predaja.</li>
             </ul>
-            <br>
-            <hr>
-            <h3 class="text-center mb-4">Ako fungujú neurónové siete?</h3>
             <p>Neurónová sieť pozostáva z niekoľkých typov vrstiev:</p>
             <ul>
                 <li><strong>Vstupná vrstva:</strong> prijíma údaje vstupujúce do siete (napríklad pixely obrázka alebo textové údaje).</li>
@@ -62,284 +83,279 @@
             </ol>
             <p>Tento cyklus sa opakuje mnohokrát, kým sieť nedosiahne požadovanú presnosť.</p>
         </section>
-        <hr>
-        wefwfewfe
-        <!-- Таблица с направлениями нейронных сетей -->
-        <section>
-            <h2 class="text-center mb-4 text-light">Основные направления и компоненты нейронных сетей</h2>
+        
+        
+        <!-- Tabuľka s hlavnými komponentmi neurónových sietí -->
+        <section id="neural-network-components" class="container my-5">
+            <h2 class="text-center mb-4 text-light">Hlavné komponenty a smery neurónových sietí</h2>
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-dark">
                     <thead>
                         <tr>
-                            <th scope="col">Компонент/Направление</th>
-                            <th scope="col">Описание</th>
+                            <th scope="col">Komponent/Smer</th>
+                            <th scope="col">Popis</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Перцептрон</strong></td>
-                            <td>Простейший вид нейронной сети, состоящий из одного нейрона, предназначенного для бинарной классификации. Используется для задач с линейной разделимостью данных.</td>
+                            <td><strong>Perceptron</strong></td>
+                            <td>Najjednoduchší typ neurónovej siete, pozostávajúci z jedného neurónu, určeného pre binárnu klasifikáciu. Používa sa na úlohy s lineárnou separabilitou dát.</td>
                         </tr>
                         <tr>
-                            <td><strong>Многослойный перцептрон (MLP)</strong></td>
-                            <td>Нейронная сеть с несколькими скрытыми слоями нейронов. Это основа глубокого обучения, способная моделировать более сложные функции, чем одиночный перцептрон.</td>
+                            <td><strong>Viacvrstvový perceptron (MLP)</strong></td>
+                            <td>Neurónová sieť s viacerými skrytými vrstvami neurónov. Je základom hlbokého učenia, schopná modelovať zložitejšie funkcie než jeden perceptron.</td>
                         </tr>
                         <tr>
-                            <td><strong>Сверточные нейронные сети (CNN)</strong></td>
-                            <td>Используются для анализа визуальных данных, таких как изображения и видео. Содержат сверточные слои, которые выделяют пространственные признаки, что делает их эффективными для распознавания объектов и лиц.</td>
+                            <td><strong>Konvolučné neurónové siete (CNN)</strong></td>
+                            <td>Používajú sa na analýzu vizuálnych dát, ako sú obrázky a video. Obsahujú konvolučné vrstvy, ktoré vyberajú priestorové črty, čo ich robí účinnými pre rozpoznávanie objektov a tvárí.</td>
                         </tr>
                         <tr>
-                            <td><strong>Рекуррентные нейронные сети (RNN)</strong></td>
-                            <td>Способны обрабатывать последовательные данные, такие как текст или временные ряды. Содержат петли, позволяющие учитывать предыдущие состояния, что делает их подходящими для обработки языка и временных данных.</td>
+                            <td><strong>Rekurentné neurónové siete (RNN)</strong></td>
+                            <td>Schopné spracovávať sekvenčné dáta, ako je text alebo časové rady. Obsahujú slučky, ktoré umožňujú zohľadňovať predchádzajúce stavy, čo ich robí vhodnými pre spracovanie jazyka a časových dát.</td>
                         </tr>
                         <tr>
-                            <td><strong>Слои нейронной сети</strong></td>
-                            <td>Основные слои включают входной, скрытые и выходной. Скрытые слои состоят из нейронов, которые преобразуют входные данные и выделяют значимые признаки для последующих слоев.</td>
+                            <td><strong>Vrstvy neurónovej siete</strong></td>
+                            <td>Základné vrstvy zahŕňajú vstupnú, skryté a výstupnú vrstvu. Skryté vrstvy pozostávajú z neurónov, ktoré transformujú vstupné dáta a extrahujú dôležité črty pre ďalšie vrstvy.</td>
                         </tr>
                         <tr>
-                            <td><strong>Функции активации</strong></td>
-                            <td>Функции, которые определяют выход каждого нейрона, делая сеть нелинейной. Популярные функции активации: ReLU, сигмоида и tanh, каждая из которых подходит для разных типов задач.</td>
+                            <td><strong>Aktivačné funkcie</strong></td>
+                            <td>Funkcie, ktoré určujú výstup každého neurónu, čím robia sieť nelineárnou. Populárne aktivačné funkcie: ReLU, sigmoid a tanh, každá vhodná pre rôzne typy úloh.</td>
                         </tr>
                         <tr>
-                            <td><strong>Обучение нейронной сети</strong></td>
-                            <td>Процесс, в ходе которого сеть оптимизирует свои параметры (веса и смещения) для минимизации ошибки. Используются алгоритмы, такие как обратное распространение ошибки и градиентный спуск.</td>
+                            <td><strong>Tréning neurónovej siete</strong></td>
+                            <td>Proces, pri ktorom sieť optimalizuje svoje parametre (váhy a posuny) na minimalizáciu chyby. Používajú sa algoritmy ako spätné šírenie chyby a gradientný zostup.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-        <hr>
 
-        <!-- Библиотеки Python -->
-        <section class="container my-5">
-            <h2 class="text-center mb-4">Библиотеки Python для создания нейросетей</h2>
-            <p class="text-center">Python предлагает широкий спектр библиотек для разработки и обучения нейронных сетей. Некоторые из самых популярных:</p>
+        <!-- Knižnice Python -->
+        <section id="python-libraries" class="container my-5">
+            <h2 class="text-center mb-4">Python knižnice pre tvorbu neurónových sietí</h2>
+            <p class="text-center">Python ponúka široké spektrum knižníc pre vývoj a tréning neurónových sietí. Niektoré z najpopulárnejších:</p>
             <ul class="list-unstyled">
                 <li class="mb-4">
-                    <strong>TensorFlow:</strong> мощная библиотека от Google для машинного обучения и глубокого обучения. Поддерживает как обучение на CPU, так и на GPU.
+                    <strong>TensorFlow:</strong> výkonná knižnica od Google pre strojové učenie a hlboké učenie. Podporuje tréning na CPU aj GPU.
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install tensorflow</code>
-                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Устанавливает библиотеку TensorFlow</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
+                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu TensorFlow</span>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                     </div>
                 </li>
                 <li class="mb-4">
-                    <strong>Keras:</strong> высокоуровневая библиотека, работающая поверх TensorFlow. Облегчает процесс создания и обучения моделей благодаря простому и интуитивно понятному интерфейсу.
+                    <strong>Keras:</strong> vysokoúrovňová knižnica pracujúca nad TensorFlow. Uľahčuje proces tvorby a tréningu modelov vďaka jednoduchému a intuitívnemu rozhraniu.
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install keras</code>
-                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Устанавливает библиотеку Keras</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
+                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu Keras</span>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                     </div>
                 </li>
                 <li class="mb-4">
-                    <strong>PyTorch:</strong> динамический фреймворк от Facebook, популярный среди исследователей за счет гибкости и удобства при разработке новых архитектур нейросетей.
+                    <strong>PyTorch:</strong> dynamický framework od Facebooku, populárny medzi výskumníkmi vďaka flexibilite a pohodlnosti pri vývoji nových architektúr neurónových sietí.
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install torch</code>
-                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Устанавливает библиотеку PyTorch</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
+                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu PyTorch</span>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                     </div>
                 </li>
                 <li class="mb-4">
-                    <strong>Scikit-learn:</strong> библиотека для машинного обучения, предоставляющая простые в использовании инструменты для задач классификации, регрессии и кластеризации. Подходит для базовых моделей нейронных сетей.
+                    <strong>Scikit-learn:</strong> knižnica pre strojové učenie, ktorá ponúka jednoduché nástroje pre úlohy klasifikácie, regresie a zhlukovania. Vhodná pre základné modely neurónových sietí.
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install scikit-learn</code>
-                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Устанавливает библиотеку Scikit-learn</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
+                        <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu Scikit-learn</span>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                     </div>
                 </li>
             </ul>
-            <p class="text-center">Выбор библиотеки зависит от конкретной задачи, требований к производительности и личных предпочтений разработчика.</p>
+            <p class="text-center">Výber knižnice závisí od konkrétnej úlohy, požiadaviek na výkon a osobných preferencií vývojára.</p>
         </section>
-        <hr>
+                
 
         <!-- TensorFlow 2 -->
-        <section class="container my-5">
-            <h2 class="text-center mb-4">Краткое руководство по TensorFlow 2 для начинающих</h2>
+        <section id="tensorflow-guide" class="container my-5">
+            <h2 class="text-center mb-4">Stručný návod pre TensorFlow 2 pre začiatočníkov</h2>
             <img src="../images_and_icons/timas_materials/tensorflow.jpg" class="img-fluid" alt="TensorFlow">
             <br>
+            <br>
             <p>
-                Это краткое введение использует Keras для:
+                Tento stručný úvod používa Keras na:
                 <ol>
-                    <li><strong>Загрузите готовый набор данных.</strong></li>
-                    <li><strong>Создайте модель машинного обучения нейронной сети, которая классифицирует изображения.</strong></li>
-                    <li><strong>Обучите эту нейронную сеть.</strong></li>
-                    <li><strong>Загрузите готовый набор данных.</strong></li>
-                    <li><strong>Оцените точность модели.</strong></li>
+                    <li><strong>Nahratie pripraveného datasetu.</strong></li>
+                    <li><strong>Vytvorenie modelu strojového učenia neurónovej siete, ktorý klasifikuje obrázky.</strong></li>
+                    <li><strong>Tréning tejto neurónovej siete.</strong></li>
+                    <li><strong>Nahratie pripraveného datasetu.</strong></li>
+                    <li><strong>Vyhodnotenie presnosti modelu.</strong></li>
                 </ol>
-                Keras — это API высокого уровня платформы TensorFlow. Он предоставляет доступный и высокопроизводительный интерфейс для решения задач машинного обучения (ML) с упором на современное глубокое обучение. Keras охватывает каждый этап рабочего процесса машинного обучения: от обработки данных до настройки гиперпараметров и развертывания. Он был разработан с упором на возможность быстрого экспериментирования.</p>
-        
-                <div class="feature-block mb-4">
-                    <strong>Настройка TensorFlow:</strong>
-                    <p>Импортируйте TensorFlow и проверьте его версию, чтобы убедиться, что установленная версия актуальна:</p>
-                    <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+                Keras je vysokúrovňové API platformy TensorFlow. Poskytuje prístupné a výkonné rozhranie na riešenie úloh strojového učenia (ML) so zameraním na moderné hlboké učenie. Keras pokrýva každý krok pracovného procesu strojového učenia: od spracovania dát po ladenie hyperparametrov a nasadenie. Bol navrhnutý so zameraním na rýchle experimentovanie.
+            </p>
 
-<pre class="code-block"><code>import tensorflow as tf
+            <div class="feature-block mb-4">
+                <strong>Nastavenie TensorFlow:</strong>
+                <p>Importujte TensorFlow a skontrolujte jeho verziu, aby ste sa uistili, že nainštalovaná verzia je aktuálna:</p>
+                <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+                <pre class="code-block"><code>import tensorflow as tf
 print("TensorFlow version:", tf.__version__)</code></pre>
-
-
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
-                    </div>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                 </div>
-                
-                <div class="feature-block mb-4">
-                    <strong>Загрузка набора данных MNIST:</strong>
-                    <p>Загрузите стандартный набор данных MNIST и нормализуйте значения пикселей, разделив их на 255:</p>
-                    <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+            </div>
 
-<pre class="code-block"><code>mnist = tf.keras.datasets.mnist
+            <div class="feature-block mb-4">
+                <strong>Nahratie datasetu MNIST:</strong>
+                <p>Nahranie štandardného datasetu MNIST a normalizácia hodnôt pixelov delením na 255:</p>
+                <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+                <pre class="code-block"><code>mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0</code></pre>
-
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
-                    </div>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                 </div>
-                
-                <div class="feature-block mb-4">
-                    <strong>Создание модели:</strong>
-                    <p>Создайте нейронную сеть, используя Keras. Эта модель включает слои `Flatten`, `Dense` и `Dropout` для классификации изображений:</p>
-                    <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
-                        
-<pre class="code-block"><code>model = tf.keras.models.Sequential([
+            </div>
+
+            <div class="feature-block mb-4">
+                <strong>Vytvorenie modelu:</strong>
+                <p>Vytvorte neurónovú sieť pomocou Keras. Tento model zahŕňa vrstvy `Flatten`, `Dense` a `Dropout` pre klasifikáciu obrázkov:</p>
+                <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+                <pre class="code-block"><code>model = tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28, 28)),
     tf.keras.layers.Dense(128, activation='relu'),
     tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Dense(10)
 ])</code></pre>
-
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
-                    </div>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                 </div>
-                
-            
-                <div class="feature-block mb-4">
-                    <strong>Компиляция и обучение модели:</strong>
-                    <p>Настройте оптимизатор и функцию потерь, затем обучите модель на тренировочных данных в течение нескольких эпох:</p>
-                    <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+            </div>
 
-                        <pre class="code-block"><code>model.compile(optimizer='adam',
+            <div class="feature-block mb-4">
+                <strong>Kompilácia a tréning modelu:</strong>
+                <p>Nastavte optimalizátor a funkciu straty, potom trénujte model na tréningových dátach počas niekoľkých epôch:</p>
+                <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+                <pre class="code-block"><code>model.compile(optimizer='adam',
     loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-    metrics=['accuracy'])
+    metrics=['accuracy']
+)
 model.fit(x_train, y_train, epochs=5)</code></pre>
-                    
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
-                    </div>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                 </div>
-            
-                <div class="feature-block mb-4">
-                    <strong>Оценка модели:</strong>
-                    <p>Используйте метод `Model.evaluate` для проверки точности модели на тестовых данных:</p>
-                    <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
-                        <pre class="code-block"><code>model.evaluate(x_test, y_test, verbose=2)</code></pre>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
-                    </div>
-                </div>
-                
-                <div class="feature-block mb-4">
-                    <strong>Возвращение вероятностей:</strong>
-                    <p>Добавьте слой `Softmax` к модели, чтобы получить вероятность для каждого класса:</p>
-                    <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+            </div>
 
-<pre class="code-block"><code>probability_model = tf.keras.Sequential([
+            <div class="feature-block mb-4">
+                <strong>Vyhodnotenie modelu:</strong>
+                <p>Použite metódu `Model.evaluate` na overenie presnosti modelu na testovacích dátach:</p>
+                <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+                    <pre class="code-block"><code>model.evaluate(x_test, y_test, verbose=2)</code></pre>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                </div>
+            </div>
+
+            <div class="feature-block mb-4">
+                <strong>Výpočet pravdepodobností:</strong>
+                <p>Pridajte vrstvu `Softmax` do modelu, aby ste získali pravdepodobnosti pre každú triedu:</p>
+                <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
+                <pre class="code-block"><code>probability_model = tf.keras.Sequential([
         model,
         tf.keras.layers.Softmax()
 ])
 probability_model(x_test[:5])</code></pre>
-
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Копировать</button>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
                     </div>
                 </div>
-        </section>
-        <hr>
-        
-        <!-- Мини-тест -->
-        <section class="my-5">
-            <h2>Мини-тест: проверьте свои знания</h2>
+            </section>
+
+        <!-- Mini-test -->
+        <section id="mini-test" class="container my-5">
+            <h2 style="text-align: center;">Mini-test: Otestujte svoje znalosti</h2>
             <form id="quiz-form">
-                <!-- Вопрос 1 -->
+                <!-- Otázka 1 -->
                 <div class="mb-3">
-                    <label class="form-label">1. Что является основной целью нейронной сети?</label>
+                    <label class="form-label">1. Aký je hlavný cieľ neurónovej siete?</label>
                     <div>
                         <input type="radio" id="q1a" name="question1" value="0">
-                        <label for="q1a">А. Сохранение данных без изменений</label>
+                        <label for="q1a">A. Zachovanie údajov bez zmien</label>
                     </div>
                     <div>
                         <input type="radio" id="q1b" name="question1" value="1">
-                        <label for="q1b">Б. Обучение на данных для улучшения предсказаний</label>
+                        <label for="q1b">B. Učenie na dátach na zlepšenie predikcií</label>
                     </div>
                     <div>
                         <input type="radio" id="q1c" name="question1" value="0">
-                        <label for="q1c">В. Удаление шума из данных</label>
+                        <label for="q1c">C. Odstránenie šumu z dát</label>
                     </div>
                 </div>
 
-                <!-- Вопрос 2 -->
+                <!-- Otázka 2 -->
                 <div class="mb-3">
-                    <label class="form-label">2. Какая библиотека является динамической и популярна среди исследователей для создания новых архитектур?</label>
+                    <label class="form-label">2. Ktorá knižnica je dynamická a populárna medzi výskumníkmi na tvorbu nových architektúr?</label>
                     <div>
                         <input type="radio" id="q2a" name="question2" value="1">
-                        <label for="q2a">А. PyTorch</label>
+                        <label for="q2a">A. PyTorch</label>
                     </div>
                     <div>
                         <input type="radio" id="q2b" name="question2" value="0">
-                        <label for="q2b">Б. TensorFlow</label>
+                        <label for="q2b">B. TensorFlow</label>
                     </div>
                     <div>
                         <input type="radio" id="q2c" name="question2" value="0">
-                        <label for="q2c">В. Scikit-learn</label>
+                        <label for="q2c">C. Scikit-learn</label>
                     </div>
                 </div>
 
-                <!-- Вопрос 3 -->
+                <!-- Otázka 3 -->
                 <div class="mb-3">
-                    <label class="form-label">3. Как называется процесс, при котором ошибка распространяется назад по сети для корректировки весов?</label>
+                    <label class="form-label">3. Ako sa nazýva proces, pri ktorom sa chyba šíri späť po sieti na úpravu váh?</label>
                     <div>
                         <input type="radio" id="q3a" name="question3" value="1">
-                        <label for="q3a">А. Обратное распространение ошибки</label>
+                        <label for="q3a">A. Spätné šírenie chyby</label>
                     </div>
                     <div>
                         <input type="radio" id="q3b" name="question3" value="0">
-                        <label for="q3b">Б. Прямое распространение</label>
+                        <label for="q3b">B. Priame šírenie</label>
                     </div>
                     <div>
                         <input type="radio" id="q3c" name="question3" value="0">
-                        <label for="q3c">В. Регуляризация</label>
+                        <label for="q3c">C. Regularizácia</label>
                     </div>
                 </div>
 
-                <!-- Вопрос 4 -->
+                <!-- Otázka 4 -->
                 <div class="mb-3">
-                    <label class="form-label">4. Какой метод используется для оценки точности модели на тестовых данных?</label>
-                    <input type="text" class="form-control" name="question4" placeholder="Введите ваш ответ">
+                    <label class="form-label">4. Aká metóda sa používa na hodnotenie presnosti modelu na testovacích dátach?</label>
+                    <input type="text" class="form-control" name="question4" placeholder="Zadajte vašu odpoveď">
                 </div>
-                <!-- Вопрос 5 -->
+                
+                <!-- Otázka 5 -->
                 <div class="mb-3">
-                    <label class="form-label">5. Какой слой добавляется для получения вероятностей классов?</label>
-                    <input type="text" class="form-control" name="question5" placeholder="Введите ваш ответ">
+                    <label class="form-label">5. Ktorá vrstva sa pridáva na získanie pravdepodobností tried?</label>
+                    <input type="text" class="form-control" name="question5" placeholder="Zadajte vašu odpoveď">
                 </div>
-                <!-- Вопрос 6 -->
+                
+                <!-- Otázka 6 -->
                 <div class="mb-3">
-                    <label class="form-label">6. Какой оптимизатор используется в примере для компиляции модели?</label>
-                    <input type="text" class="form-control" name="question6" placeholder="Введите ваш ответ">
+                    <label class="form-label">6. Aký optimalizátor sa používa v príklade na kompiláciu modelu?</label>
+                    <input type="text" class="form-control" name="question6" placeholder="Zadajte vašu odpoveď">
                 </div>
-                <button type="button" class="btn btn-primary" onclick="checkQuiz()">Проверить ответы</button>
+                
+                <button type="button" class="btn btn-primary" onclick="checkQuiz()">Skontrolovať odpovede</button>
                 <p id="result" class="mt-3"></p>
-                </form>
+            </form>
         </section>
+
         <div class="footer-content d-flex flex-column flex-md-row justify-content-center align-items-center">
-            <p style="font-size: 15px;" class="mb-0 me-md-3">&copy; 2024 Изучение нейросетей на Python</p>
+            <p style="font-size: 15px;" class="mb-0 me-md-3">&copy; 2024 Štúdium neurónových sietí v Pythone</p>
             <a href="https://github.com/TimLapan/webove_project" target="_blank" class="footer-link me-md-3 d-flex align-items-center">
-                Проект на GitHub
+                Projekt na GitHube
                 <img width="20" height="20" src="../images_and_icons/timas_materials/github.png" alt="GitHub" class="ms-2">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tsimafei.lapanik@gmail.com" target="_blank" class="footer-link d-flex align-items-center">
-                    Contact
-                    <img width="20" height="20" src="../images_and_icons/timas_materials/gmail.png" alt="Email" class="ms-2">
-                </a>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tsimafei.lapanik@gmail.com" target="_blank" class="footer-link d-flex align-items-center">
+                Kontakt
+                <img width="20" height="20" src="../images_and_icons/timas_materials/gmail.png" alt="Email" class="ms-2">
+            </a>
         </div>
     </main>
 
     <!-- Скрипт для проверки ответов -->
     <script src="../js/script.js"></script>
     <!-- Подключение JavaScript Bootstrap и Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
