@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/basics_styles.css">
     <link rel="icon" sizes="200x200" href="../images_and_icons/timas_materials/favicon.png" type="image/x-icon">
 </head>
-<body data-spy="scroll" data-target="left_navigation_menu" data-offset="12">
+<body>
     <!-- Navigačné menu -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
@@ -51,6 +51,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#mini-test">Mini-test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sekcia_zmena">Sekcia zmena</a>
                     </li>
                 </ul>
             </nav>
@@ -133,14 +136,14 @@
         <!-- Knižnice Python -->
         <section id="python-libraries" class="container my-5">
             <h2 class="text-center mb-4">Python knižnice pre tvorbu neurónových sietí</h2>
-            <p class="text-center">Python ponúka široké spektrum knižníc pre vývoj a tréning neurónových sietí. Niektoré z najpopulárnejších:</p>
+            <p>Python ponúka široké spektrum knižníc pre vývoj a tréning neurónových sietí. Niektoré z najpopulárnejších:</p>
             <ul class="list-unstyled">
                 <li class="mb-4">
                     <strong>TensorFlow:</strong> výkonná knižnica od Google pre strojové učenie a hlboké učenie. Podporuje tréning na CPU aj GPU.
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install tensorflow</code>
                         <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu TensorFlow</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                     </div>
                 </li>
                 <li class="mb-4">
@@ -148,7 +151,7 @@
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install keras</code>
                         <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu Keras</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                     </div>
                 </li>
                 <li class="mb-4">
@@ -156,7 +159,7 @@
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install torch</code>
                         <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu PyTorch</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                     </div>
                 </li>
                 <li class="mb-4">
@@ -164,11 +167,11 @@
                     <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                         <code>pip install scikit-learn</code>
                         <span class="code-description ms-md-3 mt-2 mt-md-0">— Inštaluje knižnicu Scikit-learn</span>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                     </div>
                 </li>
             </ul>
-            <p class="text-center">Výber knižnice závisí od konkrétnej úlohy, požiadaviek na výkon a osobných preferencií vývojára.</p>
+            <p>Výber knižnice závisí od konkrétnej úlohy, požiadaviek na výkon a osobných preferencií vývojára.</p>
         </section>
                 
 
@@ -196,7 +199,7 @@
                 <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                 <pre class="code-block"><code>import tensorflow as tf
 print("TensorFlow version:", tf.__version__)</code></pre>
-                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                 </div>
             </div>
 
@@ -207,7 +210,7 @@ print("TensorFlow version:", tf.__version__)</code></pre>
                 <pre class="code-block"><code>mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0</code></pre>
-                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                 </div>
             </div>
 
@@ -221,7 +224,7 @@ x_train, x_test = x_train / 255.0, x_test / 255.0</code></pre>
     tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Dense(10)
 ])</code></pre>
-                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                 </div>
             </div>
 
@@ -234,7 +237,7 @@ x_train, x_test = x_train / 255.0, x_test / 255.0</code></pre>
     metrics=['accuracy']
 )
 model.fit(x_train, y_train, epochs=5)</code></pre>
-                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                 </div>
             </div>
 
@@ -243,7 +246,7 @@ model.fit(x_train, y_train, epochs=5)</code></pre>
                 <p>Použite metódu `Model.evaluate` na overenie presnosti modelu na testovacích dátach:</p>
                 <div class="code-container mt-2 d-flex flex-column flex-md-row align-items-md-center">
                     <pre class="code-block"><code>model.evaluate(x_test, y_test, verbose=2)</code></pre>
-                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                    <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                 </div>
             </div>
 
@@ -256,7 +259,7 @@ model.fit(x_train, y_train, epochs=5)</code></pre>
         tf.keras.layers.Softmax()
 ])
 probability_model(x_test[:5])</code></pre>
-                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Kopírovať</button>
+                        <button class="copy-button mt-2 mt-md-0" onclick="copyCode(this)">Copy</button>
                     </div>
                 </div>
             </section>
@@ -330,13 +333,29 @@ probability_model(x_test[:5])</code></pre>
                 
                 <!-- Otázka 6 -->
                 <div class="mb-3">
-                    <label class="form-label">6. Aký optimalizátor sa používa v príklade na kompiláciu modelu?</label>
+                    <label class="form-label">6. Ktorá metóda sa používa na vytvorenie sekvenčného modelu neurónovej siete?</label>
                     <input type="text" class="form-control" name="question6" placeholder="Zadajte vašu odpoveď">
                 </div>
                 
                 <button type="button" class="btn btn-primary" onclick="checkQuiz()">Skontrolovať odpovede</button>
                 <p id="result" class="mt-3"></p>
             </form>
+        </section>
+
+        <section id="sekcia_zmena" class="container my-5">
+            <h2 class="text-center mb-4">Sekcia Zmena - Úpravy a Vylepšenia</h2>
+            <ul>
+                <li><strong>Prístupnosť:</strong> Pridané atribúty pre prístupnosť pre podporu používateľov s obmedzenými možnosťami.</li>
+                <li><strong>Vylepšenia UX:</strong> Vylepšená navigácia a vizuálne usporiadanie s konzistentným farebným rozhraním.</li>
+                <li><strong>UI Modifikácie:</strong> Zmeny v štýlovaní sekcií a navigácie pre jasnejšiu štruktúru stránky.</li>
+                <li><strong>Podpora pre malé obrazovky:</strong> Vylepšená podpora pre mobilné zariadenia.</li>
+                <li><strong>UI Modifikácie:</strong> Navigačné panel slava </li>
+                <li><strong>Sablon</strong> Sablon </li>
+                <li><strong>Sablon</strong> Sablon </li>
+                <li><strong>Sablon</strong> Sablon </li>
+                <li><strong>Sablon</strong> Sablon </li>
+                <li><strong>Sablon</strong> Sablon </li>
+            </ul>
         </section>
 
         <div class="footer-content d-flex flex-column flex-md-row justify-content-center align-items-center">

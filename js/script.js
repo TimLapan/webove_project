@@ -16,7 +16,7 @@ function checkQuiz() {
     const correctAnswersText = [
         'model.evaluate()', // Вопрос 4
         'Softmax',          // Вопрос 5
-        'Adam'              // Вопрос 6
+        'Sequential'        // Вопрос 6
     ];
 
     // Проверяем правильность ответов на вопросы 4-6
@@ -33,9 +33,14 @@ function checkQuiz() {
 
     // Изменяем цвет текста в зависимости от количества правильных ответов
     if (score === 6) {
-        resultElement.textContent = "Goodjob " + resultText;
+        resultElement.textContent = "Výborne. " + resultText;
         resultElement.style.color = "green";  // Зеленый цвет для идеального результата
-    } else {
+    } 
+    else if (score >= 3) {
+        resultElement.textContent = "Nie je to zlé, ale mohlo by to byť lepšie. " + resultText;
+        resultElement.style.color = "yellow";  // Зеленый цвет для идеального результата
+    }
+    else {
         resultElement.textContent = resultText;
         resultElement.style.color = "red";  // Красный цвет для неполного результата
     }
@@ -65,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let index = sections.length;
 
         // Определение активного раздела на основе прокрутки
-        while (--index && window.scrollY + 125 < sections[index].offsetTop) {}
+        while (--index && window.scrollY + 250 < sections[index].offsetTop) {}
 
         // Удаление активного класса со всех ссылок и добавление только нужной
         navLinks.forEach((link) => link.classList.remove("active"));
