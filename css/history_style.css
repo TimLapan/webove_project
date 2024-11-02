@@ -27,62 +27,31 @@ html {
     padding: 40px;
 }
 
-.dark-theme h1,
-.dark-theme h2,
-.dark-theme h3,
-.dark-theme .subtitle-container,
-.dark-theme .title-container {
-    color: #ffffff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .intro {
+        background-size: contain;
+        min-height: 80vh;
+    }
 }
 
-.dark-theme p {
-    color: #dcdcdc;
-    line-height: 1.6;
+@media (max-width: 480px) {
+    .intro {
+        background-size: contain;
+        min-height: 60vh;
+    }
 }
 
-.dark-theme a {
-    color: #66b3ff;
-    text-decoration: none;
-}
-
-.dark-theme a:hover {
-    color: #99ccff;
-    text-decoration: underline;
-}
-
-.dark-theme .btn {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #666666;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.dark-theme .btn:hover {
-    background-color: #555555;
-    color: #e0e0e0;
-}
-
-.dark-theme .card {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
-}
-
-.dark-theme input,
-.dark-theme textarea {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #666666;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.dark-theme hr {
-    border-top: 1px solid #444444;
+/* Фон и изображение */
+.intro {
+    background-image: url('../images_and_icons/history_photo/python2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 /* Основные стили текста и заголовков */
@@ -141,65 +110,6 @@ html {
     line-height: 1.3em;
 }
 
-/* Адаптивные стили */
-@media (max-width: 768px) {
-    .title-python {
-        font-size: 4em;
-        letter-spacing: 15px;
-    }
-
-    .title-put {
-        font-size: 3em;
-        letter-spacing: 2px;
-        margin-top: -40px;
-    }
-
-    .subheading {
-        font-size: 1.5em;
-        letter-spacing: 1.5px;
-    }
-
-    .intro {
-        background-size: contain;
-        min-height: 80vh;
-    }
-}
-
-@media (max-width: 480px) {
-    .title-python {
-        font-size: 3em;
-        letter-spacing: 10px;
-    }
-
-    .title-put {
-        font-size: 2.5em;
-        letter-spacing: 1.5px;
-        margin-top: -30px;
-    }
-
-    .subheading {
-        font-size: 1.2em;
-        letter-spacing: 1px;
-    }
-
-    .intro {
-        background-size: contain;
-        min-height: 60vh;
-    }
-}
-
-/* Фон и изображение */
-.intro {
-    background-image: url('../images_and_icons/history_photo/python2.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
 .overlay {
     position: absolute;
     top: 0;
@@ -233,7 +143,7 @@ html {
 }
 
 .image-container img {
-    width: 100%;
+    width: 200px;
     height: auto;
     border-radius: 15px;
     cursor: pointer;
@@ -247,11 +157,11 @@ html {
 }
 
 .image-container.move-down {
-    transform: translateY(26px) rotate(-20deg);
+    transform: translateY(7px);
 }
 
 .image-container.move-up {
-    transform: translateY(-26px) rotate(-20deg);
+    transform: translateY(-7px);
 }
 
 /* Адаптивные стили для планшетов */
@@ -303,7 +213,6 @@ html {
     }
 }
 
-
 /* Анимация текста */
 .tn-atom-container {
     position: absolute;
@@ -342,3 +251,92 @@ html {
         transform: translateY(-33.33%);
     }
 }
+
+/* Секция истории */
+.history-section {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    position: relative;
+}
+
+.history-section h2 {
+    color: #66b3ff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Фото слева */
+.fixed-photo-container {
+    position: absolute;
+    top: 60%;
+    left: -27%;
+    transform: translateY(-55%);
+    width: 270px; /* Установите нужную ширину фото */
+}
+
+.fixed-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Центрирование текстового контента */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Карточки */
+.card {
+    background: #222;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card-title {
+    color: #66b3ff;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-text {
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .fixed-photo-container {
+        display: none; /* Прячем фото на мобильных */
+    }
+
+    .text-content {
+        margin-left: 0;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1.1em;
+    }
+}
+
+
+
