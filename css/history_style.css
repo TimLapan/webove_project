@@ -257,17 +257,60 @@ html {
 .fixed-photo-container {
     position: absolute;
     top: 60%;
-    left: -27%;
+    left: -25%;
     transform: translateY(-55%);
-    width: 270px; /* Установите нужную ширину фото */
+    width: 25%; /* Установите нужную ширину фото */
 }
 
 .fixed-photo {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/* Скрытие фотографии на мобильных устройствах */
+@media (max-width: 576px) {
+    .fixed-photo-container {
+        display: none;
+    }
+}
+
+/* Вертикальная ориентация для больших экранов */
+@media (max-width: 1726px) {
+    .fixed-photo-container {
+        top: 50%;
+        left: -14%; /* Регулируем отступ */
+        transform: rotate(-90deg); /* Поворачиваем фото */
+        width: 200px; /* Скорректируем ширину для вертикального вида */
+    }
+
+    .fixed-photo {
+        width: auto;
+        height: 150px; /* Устанавливаем высоту вместо ширины для вертикальной ориентации */
+    }
+}
+
+/* Адаптивные стили для больших экранов */
+@media (max-width: 1430px) {
+    .fixed-photo-container {
+        position: relative; /* Меняем позицию на относительную */
+        top: auto; /* Сбрасываем значение top */
+        left: auto; /* Сбрасываем значение left */
+        transform: none; /* Убираем трансформацию */
+        margin: 20px auto; /* Центрируем изображение под заголовком */
+        width: 25%; /* Устанавливаем ширину для адаптивного отображения */
+    }
+
+    .fixed-photo {
+        width: 100%; /* Фото занимает всю ширину контейнера */
+        height: auto;
+    }
+}
+
+
+
 
 /* Центрирование текстового контента */
 .text-content {
@@ -350,10 +393,6 @@ html {
         font-size: 1.5em;
     }
 
-    .fixed-photo-container {
-        width: 200px;
-        left: -20%;
-    }
 }
 
 /* Дополнительные адаптивные стили для маленьких устройств (телефоны) */
@@ -372,10 +411,6 @@ html {
     .subheading {
         font-size: 1.2em;
         text-align: center;
-    }
-
-    .fixed-photo-container {
-        display: none; /* Прячем фото на малых экранах */
     }
 
     .side-images {
