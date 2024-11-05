@@ -13,76 +13,24 @@ html {
     color: #f0f0f0;
 }
 
-/* Переходная полоса */
-.transition-bar {
-    width: 100%;
-    height: 3px;
-    background: rgb(14, 29, 41);
-}
-
 /* Тёмная тема */
 .dark-theme {
-    background-color: #1a1a1a !important;
+    background-color: #1a1a1a;
     color: #f0f0f0;
     padding: 40px;
 }
 
-.dark-theme h1,
-.dark-theme h2,
-.dark-theme h3,
-.dark-theme .subtitle-container,
-.dark-theme .title-container {
-    color: #ffffff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-}
 
-.dark-theme p {
-    color: #dcdcdc;
-    line-height: 1.6;
-}
-
-.dark-theme a {
-    color: #66b3ff;
-    text-decoration: none;
-}
-
-.dark-theme a:hover {
-    color: #99ccff;
-    text-decoration: underline;
-}
-
-.dark-theme .btn {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #666666;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.dark-theme .btn:hover {
-    background-color: #555555;
-    color: #e0e0e0;
-}
-
-.dark-theme .card {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
-}
-
-.dark-theme input,
-.dark-theme textarea {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #666666;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.dark-theme hr {
-    border-top: 1px solid #444444;
+/* Фон и изображение */
+.intro {
+    background-image: url('../images_and_icons/history_photo/python2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 /* Основные стили текста и заголовков */
@@ -141,65 +89,6 @@ html {
     line-height: 1.3em;
 }
 
-/* Адаптивные стили */
-@media (max-width: 768px) {
-    .title-python {
-        font-size: 4em;
-        letter-spacing: 15px;
-    }
-
-    .title-put {
-        font-size: 3em;
-        letter-spacing: 2px;
-        margin-top: -40px;
-    }
-
-    .subheading {
-        font-size: 1.5em;
-        letter-spacing: 1.5px;
-    }
-
-    .intro {
-        background-size: contain;
-        min-height: 80vh;
-    }
-}
-
-@media (max-width: 480px) {
-    .title-python {
-        font-size: 3em;
-        letter-spacing: 10px;
-    }
-
-    .title-put {
-        font-size: 2.5em;
-        letter-spacing: 1.5px;
-        margin-top: -30px;
-    }
-
-    .subheading {
-        font-size: 1.2em;
-        letter-spacing: 1px;
-    }
-
-    .intro {
-        background-size: contain;
-        min-height: 60vh;
-    }
-}
-
-/* Фон и изображение */
-.intro {
-    background-image: url('../images_and_icons/history_photo/python2.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
 .overlay {
     position: absolute;
     top: 0;
@@ -219,43 +108,43 @@ html {
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 13px;
 }
 
 .image-container {
     position: relative;
-    width: 45%;
+    width: 12%;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: rotate(-20deg);
     box-shadow: 0px 4px 20px rgba(90, 90, 90, 0.5);
-    border-radius: 10px;
+    border-radius: 10%;
+    margin-bottom: 0.5%; /* Отступ между изображениями */
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10%;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .image-container.hover {
-    border-radius: 10px;
+    border-radius: 10%;
     transform: rotate(0deg) scale(1.2);
     box-shadow: 0px 4px 25px rgba(56, 131, 189, 0.7);
 }
 
 .image-container.move-down {
-    transform: translateY(26px) rotate(-20deg);
+    transform: translateY(15%);
 }
 
 .image-container.move-up {
-    transform: translateY(-26px) rotate(-20deg);
+    transform: translateY(-15%);
 }
 
-/* Адаптивные стили для планшетов */
-@media (max-width: 768px) {
+/* Адаптивные стили для планшетов с учетом высоты */
+@media (max-width: 1130px), (max-height: 600px) {
     .side-images {
         top: auto;
         left: 0;
@@ -263,45 +152,54 @@ html {
         width: 100%;
         transform: none;
         flex-direction: row;
-        gap: 10px;
         justify-content: center;
     }
 
     .image-container {
-        width: 18%;
+        width: 20%;
         transform: rotate(-10deg);
         box-shadow: 0px 3px 15px rgba(90, 90, 90, 0.4);
-    }
-
-    .image-container.hover {
-        transform: rotate(0deg) scale(1.1);
+        margin-bottom: 0.5%; /* Отступ между изображениями */
     }
 }
 
-/* Адаптивные стили для мобильных устройств */
-@media (max-width: 480px) {
+@media (max-width: 768px), (max-height: 500px) {
     .side-images {
         flex-direction: row;
-        gap: 5px;
         bottom: 5%;
         justify-content: space-around;
     }
 
     .image-container {
-        width: 20%;
+        width: 25%;
         transform: rotate(0deg);
         box-shadow: 0px 2px 10px rgba(90, 90, 90, 0.3);
+        margin-bottom: 0.5%; /* Отступ между изображениями */
     }
 
     .image-container img {
         border-radius: 10px;
     }
+}
 
-    .image-container.hover {
-        transform: scale(1.05);
-        box-shadow: 0px 3px 15px rgba(56, 131, 189, 0.6);
+/* Узкие экраны, портретная ориентация */
+@media (max-width: 500px) and (orientation: portrait) {
+    .side-images {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        gap: 2%;
+        top: auto;
+        bottom: 5%;
+        width: 100%;
+    }
+
+    .image-container {
+        width: 35%;
+        margin-bottom: 0.5%; /* Отступ между изображениями */
     }
 }
+
 
 
 /* Анимация текста */
@@ -342,3 +240,190 @@ html {
         transform: translateY(-33.33%);
     }
 }
+
+/* Секция истории */
+.history-section {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    position: relative;
+}
+
+.history-section h2 {
+    color: #66b3ff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Фото слева */
+.fixed-photo-container {
+    position: absolute;
+    top: 60%;
+    left: -27%;
+    transform: translateY(-55%);
+    width: 270px; /* Установите нужную ширину фото */
+}
+
+.fixed-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Центрирование текстового контента */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Карточки */
+.card {
+    background: #222;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card-title {
+    color: #66b3ff;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-text {
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+
+/* Стили панели навигации */
+#navbar {
+    background-color: #333;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: rgb(60, 122, 173);
+    color: black;
+}
+
+
+/* Дополнительные адаптивные стили для планшетов */
+@media (max-width: 992px) {
+    .title-python {
+        font-size: 4em;
+        letter-spacing: 15px;
+    }
+
+    .title-put {
+        font-size: 2.5em;
+        letter-spacing: 2px;
+        margin-top: -40px;
+    }
+
+    .subheading {
+        font-size: 1.5em;
+    }
+
+    .fixed-photo-container {
+        width: 200px;
+        left: -20%;
+    }
+}
+
+/* Дополнительные адаптивные стили для маленьких устройств (телефоны) */
+@media (max-width: 576px) {
+    .title-python {
+        font-size: 3em;
+        letter-spacing: 10px;
+    }
+
+    .title-put {
+        font-size: 1.8em;
+        letter-spacing: 1px;
+        margin-top: -30px;
+    }
+
+    .subheading {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .fixed-photo-container {
+        display: none; /* Прячем фото на малых экранах */
+    }
+
+    .side-images {
+        display: none; /* Скрываем боковые изображения на малых экранах */
+    }
+
+    .center-content {
+        max-width: 100%;
+        padding: 0 15px;
+        text-align: center;
+    }
+}
+
+/* Адаптивность карточек на малых экранах */
+@media (max-width: 576px) {
+    .card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+
+    .card-text {
+        font-size: 0.9em;
+    }
+}
+
+/* Адаптивные стили для панели навигации */
+@media (max-width: 768px) {
+    #navbar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Добавляем небольшие отступы для контейнеров на малых устройствах */
+@media (max-width: 768px) {
+    .dark-theme {
+        padding: 20px;
+    }
+
+    .text-content {
+        margin: 0;
+    }
+}
+
+
+
+
