@@ -82,3 +82,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Вызов функции при прокрутке
     window.addEventListener("scroll", setActiveLink);
 });
+
+// Устанавливаем активную ссылку в навигационном меню
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname.split("/").pop(); // Получаем имя текущего файла
+    const homeLink = document.getElementById("homeLink");
+    const historyLink = document.getElementById("historyLink");
+    const basicsLink = document.getElementById("basicsLink");
+
+    // Проверяем, на какой странице находимся, и добавляем класс 'active'
+    if (path === "index.html" || path === "") {
+        homeLink.classList.add("active");
+    } else if (path === "history.html") {
+        historyLink.classList.add("active");
+    } else if (path === "basics.html") {
+        basicsLink.classList.add("active");
+    }
+});

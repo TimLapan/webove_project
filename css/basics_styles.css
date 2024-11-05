@@ -63,11 +63,16 @@ body {
     color: #6250a7 !important; /* Цвет при наведении */
 }
 
+.navbar-nav .nav-link.active, .navbar-brand.nav-link.active {
+    color: #6250a7 !important; /* Цвет активной ссылки */
+    font-weight: bold;
+}
+
 .nav-item {
     padding-top: 0.2rem; /* Устанавливает верхний внутренний отступ */
     padding-bottom: 0.5rem; /* Устанавливает нижний внутренний отступ */
     font-size: 1.2rem; /* Уменьшает размер шрифта для выравнивания */
-    line-height: 1.5; /* Устанавливает высоту строки */
+    line-height: 1.75; /* Устанавливает высоту строки */
 }
 .navbar-toggler {
     border: none; /* Убираем рамку кнопки бургера */
@@ -79,10 +84,6 @@ body {
     color: #6250a7 !important; /* Цвет при наведении */
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-}
 
 /* Заголовки */
 h1, h2, h3 {
@@ -107,12 +108,12 @@ section {
     padding: 20px;
     background: #2a2a3c; /* Темный фон для секций */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Более темная тень */
+    box-shadow: 0 4px 8px rgba(215, 179, 179, 0.3); /* Более темная тень */
 }
 
 /* Стили списка */
 ul, ol {
-    margin-left: 20px;
+    margin-left: 15px;
     color: #f4f4f9; /* Светлый цвет для списков */
 }
 
@@ -230,7 +231,7 @@ button.btn-primary:hover {
         position: static; /* Убираем абсолютное позиционирование */
         display: block; 
         margin: 0 auto;
-        width: 35%; /* Кнопка занимает всю ширину контейнера */
+        width: 30%; /* Кнопка занимает всю ширину контейнера */
         margin-top: 15px; /* Отступ сверху для отделения от кода */
     }
 }
