@@ -14,24 +14,27 @@
         <hr>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <div class="container-fluid justify-content-center">
-                <a class="navbar-brand" href="index.html">Hlavná stránka</a>
+                <!-- Ссылка на главную страницу -->
+                <a class="navbar-brand nav-link" href="index.html" id="homeLink">Hlavná stránka</a>
+                
                 <!-- Кнопка-бургер -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+        
                 <!-- Навигационное меню -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="history.html">Python a jeho základy</a>
+                            <a class="nav-link" href="history.html" id="historyLink">Základy Pythonu a jeho historia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="basics.html">Základy neurónových sietí</a>
+                            <a class="nav-link" href="basics.html" id="basicsLink">Základy neurónových sietí</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>        
+        </nav>       
     </header>
 
     <main class="container my-5">
@@ -43,16 +46,33 @@
                 <li>Modely hlbokého učenia a ich použitie</li>
                 <li>Použitie Pythonu pre strojové učenie</li>
                 <li>Využitie rámcov ako TensorFlow a PyTorch</li>
-                <li>Práca s reálnymi údajmi</li>
+                <li>Praktické úlohy</li>
             </ul>
         </section>
-
+    
         <section>
             <h3>Materiály</h3>
-            <ul>
-                <li><a href="history.html">Python a jeho základy</a></li>
-                <li><a href="basics.html">Základy neurónových sietí</a></li>
-            </ul>
+            <div class="row">
+                <!-- Карточка для страницы history.html -->
+                <div class="col-md-6 mb-4">
+                    <a href="history.html" class="material-card">
+                        <img src="../images_and_icons/timas_materials/python_history.jpg" alt="Python a jeho základy">
+                        <div class="overlay">
+                            <div class="text">Základy Pythonu a jeho historia</div>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- Карточка для страницы basics.html -->
+                <div class="col-md-6 mb-4">
+                    <a href="basics.html" class="material-card">
+                        <img src="../images_and_icons/timas_materials/basics.jpg" alt="Základy neurónových sietí">
+                        <div class="overlay">
+                            <div class="text">Úvod do neurónových sietí a ich základných princípov.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -67,7 +87,7 @@
             <img width="20" height="20" src="../images_and_icons/timas_materials/gmail.png" alt="Email" class="ms-2">
         </a>
     </div>
-
+    <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
