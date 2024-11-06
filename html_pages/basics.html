@@ -39,7 +39,7 @@
     <div class="container-fluid my-5">
         <div class="row">
             <nav id="left_navigation_menu" class="col-md-3 col-lg-2 p-3">
-                <h5 class="mb-3">Navigačné panel</h5>
+                <h5 class="mb-3">Navigačný panel</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="#about-neural-networks">O neurónových sieťach a ako oni fungujú</a>
@@ -348,15 +348,25 @@ probability_model(x_test[:5])</code></pre>
 
         <section id="sekcia_zmena" class="container my-5">
             <h2 class="text-center mb-4">Sekcia Zmena - Úpravy a Vylepšenia</h2>
+
+            <!-- tlacidla na zmenu velkosti pisma -->
+            <div class="text-center mb-4">
+                <button id="increase-font" class="btn btn-primary">Zväčšiť písmo</button>
+                <button id="decrease-font" class="btn btn-secondary">Zmenšiť písmo</button>
+            </div>
+
             <ul>
                 <li><strong>Prístupnosť:</strong> Pridané atribúty pre prístupnosť pre podporu používateľov s obmedzenými možnosťami.</li>
                 <li><strong>Vylepšenia UX:</strong> Vylepšená navigácia a vizuálne usporiadanie s konzistentným farebným rozhraním.</li>
                 <li><strong>UI Modifikácie:</strong> Zmeny v štýlovaní sekcií a navigácie pre jasnejšiu štruktúru stránky.</li>
                 <li><strong>Podpora pre malé obrazovky:</strong> Vylepšená podpora pre mobilné zariadenia.</li>
-                <li><strong>UI Modifikácie:</strong> Navigačné panel slava </li>
-                <li><strong>Sablon</strong> Sablon </li>
-                <li><strong>Sablon</strong> Sablon </li>
-                <li><strong>Sablon</strong> Sablon </li>
+                <li><strong>UI Modifikácie:</strong> Navigačný panel naľavo </li>
+                <li><strong>Zmena veľkosti písmen: </strong></li>
+                <ul>
+                    <li>Tlačidlami "Zväčšiť písmo" alebo "Zmenšiť písmo"</li>
+                    <li>Klávesové skratky: "ctrl + šípka hore/dole" </li>
+                    <li>Skratka: Shift + koleso na myši</li>
+                </ul>
                 <li><strong>Sablon</strong> Sablon </li>
                 <li><strong>Sablon</strong> Sablon </li>
             </ul>
@@ -377,6 +387,11 @@ probability_model(x_test[:5])</code></pre>
 
     <!-- Скрипт для проверки ответов -->
     <script src="../js/script.js"></script>
+    <script src="../js/content_size.js"></script>
+    <!--
+    <script src="../js/load_resolution.js"></script>
+    -->
+
     <!-- Подключение JavaScript Bootstrap и Popper.js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
