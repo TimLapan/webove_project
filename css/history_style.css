@@ -1,10 +1,11 @@
-/* Основные стили */
+/* Základné štýly pre všetky prvky */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Štýly pre telo stránky a HTML dokument */
 body,
 html {
     height: 100%;
@@ -13,15 +14,14 @@ html {
     color: #f0f0f0;
 }
 
-/* Тёмная тема */
+/* Tmavá téma pre sekcie */
 .dark-theme {
     background-color: #1a1a1a;
     color: #f0f0f0;
     padding: 40px;
 }
 
-
-/* Фон и изображение */
+/* Úvodný obrázok s pozadím */
 .intro {
     background-image: url('../images_and_icons/history_photo/python2.jpg');
     background-size: cover;
@@ -33,7 +33,7 @@ html {
     position: relative;
 }
 
-/* Основные стили текста и заголовков */
+/* Štýly pre hlavný obsah a nadpisy */
 .center-content {
     color: #ffffff;
     text-align: left;
@@ -44,11 +44,13 @@ html {
     gap: 5px;
 }
 
+/* Kontajner pre nadpisy */
 .title-container {
     display: flex;
     flex-direction: column;
 }
 
+/* Nadpis "Python" s veľkými písmenami a tieňom */
 .title-python {
     font-size: 6em;
     font-weight: 700;
@@ -59,12 +61,14 @@ html {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+/* Flexibilné usporiadanie nadpisu */
 .title-flex {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+/* Sekundárny nadpis pod hlavným nadpisom */
 .title-put {
     font-size: 4em;
     font-weight: 700;
@@ -75,10 +79,12 @@ html {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+/* Kontajner pre podnadpisy */
 .subtitle-container {
     max-width: 700px;
 }
 
+/* Štýly podnadpisu */
 .subheading {
     font-size: 2em;
     font-weight: 600;
@@ -89,6 +95,7 @@ html {
     line-height: 1.3em;
 }
 
+/* Vrstva na prekrytie pozadia */
 .overlay {
     position: absolute;
     top: 0;
@@ -100,7 +107,8 @@ html {
     justify-content: center;
 }
 
-/* Стили для изображений */
+
+/* Štýly pre obrázky */
 .side-images {
     position: absolute;
     top: 50%;
@@ -110,6 +118,7 @@ html {
     flex-direction: column;
 }
 
+/* Kontajner pre jednotlivé obrázky */
 .image-container {
     position: relative;
     width: 12%;
@@ -118,9 +127,11 @@ html {
     transform: rotate(-20deg);
     box-shadow: 0px 4px 20px rgba(90, 90, 90, 0.5);
     border-radius: 10%;
-    margin-bottom: 0.5%; /* Отступ между изображениями */
+    margin-bottom: 0.5%;
+    /* Medzera medzi obrázkami */
 }
 
+/* Štýly pre obrázky v kontajneri */
 .image-container img {
     width: 100%;
     height: auto;
@@ -129,22 +140,26 @@ html {
     transition: transform 0.3s ease;
 }
 
+/* Efekt pri najetí kurzorom na obrázok */
 .image-container.hover {
     border-radius: 10%;
     transform: rotate(0deg) scale(1.2);
     box-shadow: 0px 4px 25px rgba(56, 131, 189, 0.7);
 }
 
+/* Efekt pohybu obrázkov nadol */
 .image-container.move-down {
     transform: translateY(15%);
 }
 
+/* Efekt pohybu obrázkov nahor */
 .image-container.move-up {
     transform: translateY(-15%);
 }
 
-/* Адаптивные стили для планшетов с учетом высоты */
-@media (max-width: 1130px), (max-height: 600px) {
+/* Adaptívne štýly pre tablety s ohľadom na výšku */
+@media (max-width: 1130px),
+(max-height: 600px) {
     .side-images {
         top: auto;
         left: 0;
@@ -159,11 +174,14 @@ html {
         width: 20%;
         transform: rotate(-10deg);
         box-shadow: 0px 3px 15px rgba(90, 90, 90, 0.4);
-        margin-bottom: 0.5%; /* Отступ между изображениями */
+        margin-bottom: 0.5%;
+        /* Medzera medzi obrázkami */
     }
 }
 
-@media (max-width: 768px), (max-height: 500px) {
+/* Adaptívne štýly pre menšie obrazovky */
+@media (max-width: 768px),
+(max-height: 500px) {
     .side-images {
         flex-direction: row;
         bottom: 5%;
@@ -174,7 +192,8 @@ html {
         width: 25%;
         transform: rotate(0deg);
         box-shadow: 0px 2px 10px rgba(90, 90, 90, 0.3);
-        margin-bottom: 0.5%; /* Отступ между изображениями */
+        margin-bottom: 0.5%;
+        /* Medzera medzi obrázkami */
     }
 
     .image-container img {
@@ -182,7 +201,7 @@ html {
     }
 }
 
-/* Узкие экраны, портретная ориентация */
+/* Štýly pre úzke obrazovky v režime na výšku */
 @media (max-width: 500px) and (orientation: portrait) {
     .side-images {
         position: relative;
@@ -196,29 +215,37 @@ html {
 
     .image-container {
         width: 35%;
-        margin-bottom: 0.5%; /* Отступ между изображениями */
+        margin-bottom: 0.5%;
+        /* Medzera medzi obrázkami */
     }
 }
 
 
 
-/* Анимация текста */
+
+/* Анимаčný kontajner pre text */
 .tn-atom-container {
     position: absolute;
     right: 1%;
+    /* Umiestnenie na pravom okraji */
     bottom: 0;
     width: 250px;
     height: 100vh;
+    /* Celková výška obrazovky */
     overflow: hidden;
+    /* Skrytie presahujúceho textu */
 }
 
+/* Kontajner pre vnútorný obsah animácie */
 .tn-atom-inner {
     display: flex;
     flex-direction: column;
     animation: scrollText 22s linear infinite;
+    /* Posuvný efekt */
     height: auto;
 }
 
+/* Štýl jednotlivých textových prvkov v animácii */
 .tn-atom {
     font-size: 30px;
     font-family: 'Mix', Arial, sans-serif;
@@ -231,6 +258,7 @@ html {
     text-align: right;
 }
 
+/* Kľúčové snímky pre animáciu posúvania textu */
 @keyframes scrollText {
     0% {
         transform: translateY(0);
@@ -241,27 +269,31 @@ html {
     }
 }
 
-/* Секция истории */
+/* Sekcia s históriou */
 .history-section {
     background-color: #1a1a1a;
     color: #f0f0f0;
     position: relative;
 }
 
+/* Štýl nadpisov v sekcii histórie */
 .history-section h2 {
     color: #66b3ff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Фото слева */
+/* Kontajner pre fotografiu vľavo */
 .fixed-photo-container {
     position: absolute;
     top: 60%;
+    /* Umiestnenie fotografie */
     left: -25%;
     transform: translateY(-55%);
-    width: 25%; /* Установите нужную ширину фото */
+    width: 25%;
+    /* Šírka fotografie */
 }
 
+/* Štýly pre samotnú fotografiu */
 .fixed-photo {
     width: 100%;
     height: 100%;
@@ -269,57 +301,61 @@ html {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Скрытие фотографии на мобильных устройствах */
+/* Skrytie fotografie na mobilných zariadeniach */
 @media (max-width: 576px) {
     .fixed-photo-container {
         display: none;
     }
 }
 
-/* Вертикальная ориентация для больших экранов */
+/* Vertikálna orientácia fotografie na väčších obrazovkách */
 @media (max-width: 1726px) {
     .fixed-photo-container {
         top: 50%;
-        left: -14%; /* Регулируем отступ */
-        transform: rotate(-90deg); /* Поворачиваем фото */
-        width: 200px; /* Скорректируем ширину для вертикального вида */
+        left: -14%;
+        transform: rotate(-90deg);
+        /* Otočenie fotografie o 90 stupňov */
+        width: 200px;
+        /* Prispôsobenie šírky */
     }
 
     .fixed-photo {
         width: auto;
-        height: 150px; /* Устанавливаем высоту вместо ширины для вертикальной ориентации */
+        height: 150px;
+        /* Nastavenie výšky pre vertikálnu orientáciu */
     }
 }
 
-/* Адаптивные стили для больших экранов */
+/* Adaptívne štýly pre veľké obrazovky */
 @media (max-width: 1430px) {
     .fixed-photo-container {
-        position: relative; /* Меняем позицию на относительную */
-        top: auto; /* Сбрасываем значение top */
-        left: auto; /* Сбрасываем значение left */
-        transform: none; /* Убираем трансформацию */
-        margin: 20px auto; /* Центрируем изображение под заголовком */
-        width: 25%; /* Устанавливаем ширину для адаптивного отображения */
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        /* Zrušenie transformácie */
+        margin: 20px auto;
+        /* Zarovnanie pod nadpisom */
+        width: 25%;
+        /* Nastavenie šírky pre adaptívne zobrazenie */
     }
 
     .fixed-photo {
-        width: 100%; /* Фото занимает всю ширину контейнера */
+        width: 100%;
+        /* Foto zaberá celú šírku kontajnera */
         height: auto;
     }
 }
 
 
-
-
-/* Центрирование текстового контента */
+/* Centrovanie textového obsahu */
 .text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Карточки */
+/* Štýly pre karty */
 .card {
     background: #222;
     border: none;
@@ -349,8 +385,7 @@ html {
     line-height: 1.6;
 }
 
-
-/* Стили панели навигации */
+/* Štýly pre navigačný panel */
 #navbar {
     background-color: #333;
     position: fixed;
@@ -359,8 +394,10 @@ html {
     width: 100%;
     z-index: 1000;
     transition: top 0.3s;
-    white-space: nowrap; /* Запрещаем перенос текста */
+    white-space: nowrap;
+    /* Zákaz zalomenia textu */
 }
+
 #navbar a {
     display: inline-block;
     color: #f2f2f2;
@@ -369,30 +406,34 @@ html {
     text-decoration: none;
     font-size: 17px;
 }
+
 #navbar a:hover {
     background-color: rgb(60, 122, 173);
     color: black;
 }
 
+/* Zmenšenie písma pri šírke obrazovky do 425px */
 @media (max-width: 425px) {
-    #navbar a{
+    #navbar a {
         font-size: 85%;
     }
 }
 
+/* Zmenšenie písma pri šírke obrazovky do 375px */
 @media (max-width: 375px) {
-    #navbar a{
+    #navbar a {
         font-size: 73%;
     }
 }
 
+/* Zmenšenie písma pri šírke obrazovky do 320px */
 @media (max-width: 320px) {
-    #navbar a{
+    #navbar a {
         font-size: 60%;
     }
 }
 
-/* Дополнительные адаптивные стили для планшетов */
+/* Dodatočné adaptívne štýly pre tablety */
 @media (max-width: 992px) {
     .title-python {
         font-size: 4em;
@@ -408,10 +449,9 @@ html {
     .subheading {
         font-size: 1.5em;
     }
-
 }
 
-/* Дополнительные адаптивные стили для маленьких устройств (телефоны) */
+/* Dodatočné adaptívne štýly pre malé zariadenia (telefóny) */
 @media (max-width: 576px) {
     .title-python {
         font-size: 3em;
@@ -430,7 +470,8 @@ html {
     }
 
     .side-images {
-        display: none; /* Скрываем боковые изображения на малых экранах */
+        display: none;
+        /* Skrytie bočných obrázkov na malých obrazovkách */
     }
 
     .center-content {
@@ -440,7 +481,7 @@ html {
     }
 }
 
-/* Адаптивность карточек на малых экранах */
+/* Adaptácia veľkosti karty na malých obrazovkách */
 @media (max-width: 576px) {
     .card {
         margin: 10px 0;
@@ -456,7 +497,7 @@ html {
     }
 }
 
-/* Добавляем небольшие отступы для контейнеров на малых устройствах */
+/* Dodatočné odsadenie pre kontajnery na malých obrazovkách */
 @media (max-width: 768px) {
     .dark-theme {
         padding: 20px;
@@ -467,15 +508,13 @@ html {
     }
 }
 
-
-
-/* Основной стиль текста в футере */
+/* Štýl hlavného textu v pätičke */
 #footer_text {
     color: #f4f4f9;
     font-size: 15px;
 }
 
-/* Основные стили для футера */
+/* Hlavné štýly pre pätičku */
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -483,8 +522,7 @@ html {
     gap: 1rem;
 }
 
-
-/* Стили для ссылок */
+/* Štýly pre odkazy */
 .footer-link {
     color: #ffffff;
     text-decoration: none;
@@ -496,5 +534,3 @@ html {
 .footer-link:hover {
     color: #007bff;
 }
-
-
