@@ -1,6 +1,3 @@
-
-
-
 // Funkcia na zmenu velkosti pisma
 function changeFontSize(factor) {
     const body = document.body; // Cele Body element
