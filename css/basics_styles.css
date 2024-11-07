@@ -238,33 +238,3 @@ button.btn-primary:hover {
     }
 }
 
-/* Príklad CSS pre tlačidlá */
-.btn {
-    padding: 10px 20px; /* Vnútorné okraje */
-    font-size: 16px; /* Veľkosť písma */
-    border: none; /* Bez okrajov */
-    border-radius: 5px; /* Zaoblené rohy */
-    cursor: pointer; /* Zmena kurzora na ruku pri hover */
-    transition: background-color 0.3s, transform 0.2s; /* Prechodové efekty */
-}
-
-
-.btn-primary {
-    background-color: #007bff; /* Modrá farba pre primárne tlačidlo */
-    color: white; /* Biela farba textu */
-}
-
-.btn-primary:hover {
-    background-color: #0056b3; /* Tmavšia modrá pri hover */
-    transform: scale(1.05); /* Mierne zväčšenie pri hover */
-}
-
-.btn-secondary {
-    background-color: #6c757d; /* Šedá farba pre sekundárne tlačidlo */
-    color: white; /* Biela farba textu */
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268; /* Tmavšia šedá pri hover */
-    transform: scale(1.05); /* Mierne zväčšenie pri hover */
-}

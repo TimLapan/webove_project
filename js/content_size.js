@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Ctrl + Sipky
     document.addEventListener('keydown', (event) => {
 
-        if (event.ctrlKey && event.key === 'ArrowUp') {
+        if (event.ctrlKeytrl && event.key === 'ArrowUp') {
             // Ctrl + sipka hore pre zvacsenie pisma
             changeFontSize(2);
             event.preventDefault(); // Prevent default browser behavior
